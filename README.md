@@ -1,5 +1,16 @@
 # Ang9CustomPipe
 
+I was working on another project that needed a custom pipe.  Tried using one from a previous project and couldn't get Angular to recognize the pipe. I created this repo to get things working.  
+
+So I had created the custom pipe (filter). Imported and added it to my modules declarations. Imported and added it to my components providers and it still would not work.  
+
+As it turns out I just needed to include the FormsModule in my main module (app.module).   It is not necessary to add the filter directly to the component you are using it in.  
+
+Learn from my mistakes - I won't make this one again.  Happy coding. 
+
+Thanks to Marton Borlay for the animals array: https://gist.github.com/borlaym/585e2e09dd6abd9b0d0a
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
