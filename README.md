@@ -8,6 +8,8 @@ As it turns out I just needed to include the FormsModule in my main module (app.
 
 Learn from my mistakes - I won't make this one again.  Happy coding. 
 
+<h4>View the live site here:[ http://ang9-custom-pipes.futurebutterflies.net/]</h4>
+
 Thanks to Marton Borlay for the animals array: https://gist.github.com/borlaym/585e2e09dd6abd9b0d0a
 
 
