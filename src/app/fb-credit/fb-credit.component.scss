@@ -1,0 +1,170 @@
+@import './scss/fb-credit-keyframes.scss';
+
+$fb-orange: #fba216;
+$borboleta-color: $fb-orange; //#666
+// Circ Easing
+$easeInCirc     : cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeOutCirc    : cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$easeInOutCirc  : cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+
+.fb-credit {
+  min-height: 100px;
+  position: relative;
+  font-weight: 400;
+  font-size:14px;
+  margin-top:100px;
+  padding-bottom:100px;
+  // color: rgba(#000,.25);
+  &.dark {
+    // color: rgba(#fff,.25);
+    .link-wrapper {
+      color: rgba(#fff,.25);
+      &.active {
+        color:rgba(#fff,.7);
+      }
+      .logo .st0 {
+        fill: #fff;
+      }
+      .fb-info {
+        // color: rgba(#fff,.8);
+      }
+    }
+  }
+
+  .link-wrapper {
+    text-align:center;
+    display: block;
+    opacity: .5;
+    color: rgba(#000,.25);
+    text-decoration:none;
+    transition: all .8s $easeOutCirc;
+    &.active {
+        opacity: 1;
+        color:rgba(#000,.7);
+    }
+    .logo {
+      margin-top:4px;
+      width:150px;
+      .st0 {
+        fill: #000;
+      }
+    }
+
+    .fb-info {
+      color: rgba($fb-orange,.8);
+      margin-top:6px;
+      font-size:.8rem;
+      opacity:0;
+    }
+    &:hover {
+      .fb-info {
+        opacity: 1;
+        animation-name:fb-bounce-in;
+        animation-iteration-count:1;
+        animation-timing-function: $easeOutCirc;
+        animation-duration:1.8s;
+
+      }
+    }
+  }
+}
+
+// #spinner {
+//   margin-top:30px;
+//   i {
+//     font-size:20px;
+//   }
+// }
+
+.borboletas {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  -moz-animation: borboletas-pos-loop 7s ease-in-out infinite alternate-reverse;
+  -webkit-animation: borboletas-pos-loop 7s ease-in-out infinite alternate-reverse;
+  animation: borboletas-pos-loop 7s ease-in-out infinite alternate-reverse;
+}
+
+.borboleta-oval-squish {
+  -moz-transform: scale(0.3, 1);
+  -ms-transform: scale(0.3, 1);
+  -webkit-transform: scale(0.3, 1);
+  transform: scale(0.3, 1);
+}
+
+.borboleta-1 {
+  -moz-animation: borboleta-radial-loop 10s linear infinite;
+  -webkit-animation: borboleta-radial-loop 10s linear infinite;
+  animation: borboleta-radial-loop 10s linear infinite;
+}
+
+.borboleta-2 {
+  -moz-animation: borboleta-radial-loop 15s linear infinite;
+  -webkit-animation: borboleta-radial-loop 15s linear infinite;
+  animation: borboleta-radial-loop 15s linear infinite;
+}
+
+.borboleta-oval {
+  position: absolute;
+  -moz-animation: borboleta-radial-loop 1.2s linear infinite;
+  -webkit-animation: borboleta-radial-loop 1.2s linear infinite;
+  animation: borboleta-radial-loop 1.2s linear infinite;
+}
+
+.borboleta-radial {
+  position: absolute;
+  left: 80px;
+  top: 0;
+  -moz-animation: borboleta-oval-loop 1.2s linear infinite;
+  -webkit-animation: borboleta-oval-loop 1.2s linear infinite;
+  animation: borboleta-oval-loop 1.2s linear infinite;
+}
+
+.borboleta-2 .borboleta-oval {
+  -moz-animation: borboleta-radial-loop 1.5s linear infinite;
+  -webkit-animation: borboleta-radial-loop 1.5s linear infinite;
+  animation: borboleta-radial-loop 1.5s linear infinite;
+}
+
+.borboleta-2 .borboleta-radial {
+  -moz-animation: borboleta-oval-loop 1.5s linear infinite;
+  -webkit-animation: borboleta-oval-loop 1.5s linear infinite;
+  animation: borboleta-oval-loop 1.5s linear infinite;
+}
+
+.borboleta-gfx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 20px;
+}
+
+.borboleta-1 .borboleta-gfx {
+  -moz-animation: borboleta-gfx-upright-loop 10s linear infinite;
+  -webkit-animation: borboleta-gfx-upright-loop 10s linear infinite;
+  animation: borboleta-gfx-upright-loop 10s linear infinite;
+}
+
+.borboleta-2 .borboleta-gfx {
+  -moz-animation: borboleta-gfx-upright-loop 15s linear infinite;
+  -webkit-animation: borboleta-gfx-upright-loop 15s linear infinite;
+  animation: borboleta-gfx-upright-loop 15s linear infinite;
+}
+
+
+.borboleta-anim {
+  background: radial-gradient(closest-side at 50% 50%, $borboleta-color 50%, rgba($borboleta-color, 0) 50%), radial-gradient(closest-side at 50% 50%, $borboleta-color 50%, rgba($borboleta-color, 0) 50%);
+  background-repeat: no-repeat;
+  background-size: 90% 70%,100% 70%;
+  background-position: 20% -40%,0 40%;
+  width: 25px;
+  height: 20px;
+  -moz-animation: borboleta-anim-loop 150ms ease-in-out infinite alternate-reverse;
+  -webkit-animation: borboleta-anim-loop 150ms ease-in-out infinite alternate-reverse;
+  animation: borboleta-anim-loop 150ms ease-in-out infinite alternate-reverse;
+}
+
+
+

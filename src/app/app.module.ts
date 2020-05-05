@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FilterPipe } from './shared/filter.pipe';
+import { FbCreditComponent } from './fb-credit/fb-credit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterPipe,
+    FbCreditComponent,
   ],
   imports: [
     BrowserModule,
