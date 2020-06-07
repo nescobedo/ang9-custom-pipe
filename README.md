@@ -1,4 +1,8 @@
-# Ang9CustomPipe
+<p align="center">
+  <img src="http://gh-images.futurebutterflies.net/2020_fb.png">
+</p>
+
+<h1 align="center">Ang9CustomPipe</h1>
 
 I was working on another project that needed a custom pipe.  Tried using one from a previous project and couldn't get Angular to recognize the pipe. I created this repo to get things working.  
 
@@ -8,10 +12,13 @@ As it turns out I just needed to include the FormsModule in my main module (app.
 
 Learn from my mistakes - I won't make this one again.  Happy coding. 
 
-<h4>View the live site here:[ http://ang9-custom-pipes.futurebutterflies.net/]</h4>
+<h4>View the live site here: http://ang9-custom-pipes.futurebutterflies.net/</h4>
 
-Thanks to Marton Borlay for the animals array: https://gist.github.com/borlaym/585e2e09dd6abd9b0d0a
+## ❯ Resources
 
+* Thanks to Marton Borlay for the animals array: https://gist.github.com/borlaym/585e2e09dd6abd9b0d0a
+
+![divider](http://gh-images.futurebutterflies.net/divider.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
